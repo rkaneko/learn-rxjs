@@ -29,7 +29,7 @@ const childSubscription = observable2.subscribe(x => console.log(x));
 
 subscription.add(childSubscription);
 
-const intervalID = setTimeout(() => {
+const timeoutID = setTimeout(() => {
   subscription.unsubscribe();
-  clearInterval(intervalID);
+  clearTimeout(timeoutID);
 }, 3000);
